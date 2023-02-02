@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+*,*::after,*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --fs-xl: clamp(1.5rem, 5vw + .8rem, 3rem) ;
+    --fs-ml: clamp(1.3rem, 4vw + .6rem, 2rem) ;
+    --fs-100: .8rem;  
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-900: 2rem;
+}
+@media screen and (max-width:700px) {
+    :root {
+    --fs-100: .8rem;  
+    --fs-400: 1rem;
+    --fs-500: 1.15rem;
+    --fs-600: 1.3rem;
+    --fs-900: 1.8rem;
+  }
+    
+}
+.m1{margin-top: 1rem;}
+.m2{margin-top: 2rem;}
+.m3{margin-top: 3rem;}
+.m4{margin-top: 4rem;}
+.m5{margin-top: 5rem;}
+
+body{
+    background-color: rgb(212, 174, 129);
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+.heading {
+    font-size: var(--fs-xl);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+main {
+    max-height: auto;
+    width: 90vw;
+    margin-inline: auto;
+    max-width: 950px;
+    padding-inline: 2rem;
+}
+.full-grid {
+    display: grid;
+    place-items: center;
+}
+.options {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.options  p {
+    font-size: var(--fs-500);
+    width: 100%;
+    height: 100%;
+    font-family: 'Signika Negative', sans-serif;
+}
+.question{
+    font-size: var(--fs-ml);
+    font-family: 'Kanit', sans-serif;
+}
+.options p {
+    background-color: rgb(171, 163, 163);
+    padding: 14px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.options div:hover {
+    opacity: .8;
+}
+.score h2 {
+    font-size: var(--fs-500);
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+}
+.btn {
+    text-align: center;
+}
+.btn button {
+    padding: 10px 25px;
+    text-align: center;
+    font-size: var(--fs-400);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease .3s;
+    font-family: 'Anton', sans-serif;
+
+}
+.main-score {
+    color: rgb(214, 47, 18);
+}
+.btn button:hover {
+    background-color: limegreen;
+}
+
+
+@media screen and (max-width:300px) {
+   
+    main {
+        height: auto;
+        padding-block: 2rem;
+        padding-inline: 0;
+        width: 100vw;
+        margin-inline: auto;
+        max-width: 800px;
+    }
+   
+    
+}
+@media screen and (max-width:600px) {
+    .options {
+        grid-template-columns: none;
+        place-items: center;
+    }
+    main {
+        height: auto;
+        padding-block: 2rem;
+        width: 90vw;
+        margin-inline: auto;
+        max-width: 800px;
+    }
+    .options div {
+        padding: 10px 18px;
+        border-radius: 12px;
+        width: 100%;
+    }
+    
+}
