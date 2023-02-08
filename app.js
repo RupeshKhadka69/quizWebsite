@@ -168,7 +168,7 @@ for(let i=0; i<4; i++){
                     if(presentQuestion  ===  9 ){
                         const options = document.querySelector('.mainclass')
                         options.innerHTML = `
-                         <div class="btn m2"><button>Play Again</button></div>
+                         <div class="btn m2" onclick="location.reload()"><button>Play Again</button></div>
                          <div class="score m3"><h2>Your score is <span class="main-score">${presentScore}</span> out of 10 question.</h2></div>
                         `
                     }
